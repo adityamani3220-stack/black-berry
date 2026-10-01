@@ -4,6 +4,8 @@ import re
 import asyncio
 import os
 import json
+
+from telegram import ChatPermissions
 from collections import defaultdict
 from types import SimpleNamespace
 from html import escape
@@ -11,7 +13,7 @@ from urllib.parse import quote
 from urllib.request import urlopen, Request
 
 
-from telegram import Update
+from telegram import Update,ChatPermissions
 from telegram.constants import ChatMemberStatus
 from telegram.ext import (
     Application,
